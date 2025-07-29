@@ -1,0 +1,11 @@
+[project]
+name = "python-command-runner"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.1",
+    "flask-socketio>=5.5.1",
+    "python-socketio[client]>=5.13.0",
+]

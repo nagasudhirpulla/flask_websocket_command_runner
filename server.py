@@ -27,11 +27,14 @@ def handle_run_script(payload):
         emit('script_exit', {'exit_code': -1})
         disconnect()
 
-    cmd = appConf["commands"][cmdId]
+    cmdObj = appConf["commands"][cmdId]
+    cmd = cmdObj["cmd"]
+    cwd = cmdObj["cwd"]
     try:
         # Start subprocess and stream output
         process = subprocess.Popen(
             cmd,
+            cwd=cwd,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,

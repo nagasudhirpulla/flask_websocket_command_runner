@@ -6,11 +6,14 @@
 {
     "clients":
     {
-        "bjhsgdhfj": ["ping_server"]
+        "r73rG457zjkgf": ["ping_server"]
     },
     "commands":
     {
-        "ping_server": ["ping", "-n", "5", "8.8.8.8"]
+        "ping_server": {
+            "cmd":["ping", "-n", "5", "8.8.8.8"],
+            "cwd": null
+        }
     }
 }
 ```
